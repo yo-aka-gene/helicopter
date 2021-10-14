@@ -21,8 +21,8 @@ def power(
             else (data - data.mean()) ** (i + 2)
         if subtract_scale:
             temp.columns = [
-                f"({name}-{data.mean()[i].round(name_digit)})" + \
-                    f"*({name}-{data.mean()[i].round(name_digit)})" * (i + 1) for i, name in enumerate(temp.columns)
+                f"({name}-{data.mean()[j].round(name_digit)})" + \
+                    f"*({name}-{data.mean()[j].round(name_digit)})" * (i + 1) for j, name in enumerate(temp.columns)
                 ]
         else:
             temp.columns = [
