@@ -1,32 +1,33 @@
 
             feature set:
-            Index(['(size-1.99)', '(size-1.99)*(size-1.99)',
-       '(size-1.99)*(size-1.99)*(size-1.99)'],
+            Index(['(size-1.99)', '(batch-3.0)', '(size-1.99)*(size-1.99)',
+       '(batch-3.0)*(batch-3.0)', '(size-1.99)*(size-1.99)*(size-1.99)',
+       '(batch-3.0)*(batch-3.0)*(batch-3.0)', '(size-1.99)*(batch-3.0)'],
       dtype='object')
             
             optimal model:
                                         OLS Regression Results                            
 ==============================================================================
-Dep. Variable:                   time   R-squared:                       0.339
-Model:                            OLS   Adj. R-squared:                  0.279
-Method:                 Least Squares   F-statistic:                     5.635
-Date:                Mon, 18 Oct 2021   Prob (F-statistic):             0.0106
-Time:                        18:15:56   Log-Likelihood:                -25.421
-No. Observations:                  25   AIC:                             56.84
-Df Residuals:                      22   BIC:                             60.50
+Dep. Variable:                   time   R-squared:                       0.460
+Model:                            OLS   Adj. R-squared:                  0.411
+Method:                 Least Squares   F-statistic:                     9.372
+Date:                Tue, 19 Oct 2021   Prob (F-statistic):            0.00114
+Time:                        04:07:20   Log-Likelihood:                -22.888
+No. Observations:                  25   AIC:                             51.78
+Df Residuals:                      22   BIC:                             55.43
 Df Model:                           2                                         
 Covariance Type:            nonrobust                                         
 ===========================================================================================
                               coef    std err          t      P>|t|      [0.025      0.975]
 -------------------------------------------------------------------------------------------
-const                       6.2709      0.224     28.040      0.000       5.807       6.735
-(size-1.99)                 0.3965      0.204      1.942      0.065      -0.027       0.820
-(size-1.99)*(size-1.99)    -0.9450      0.353     -2.678      0.014      -1.677      -0.213
+const                       5.6196      0.294     19.095      0.000       5.009       6.230
+(size-1.99)*(size-1.99)    -0.9487      0.319     -2.976      0.007      -1.610      -0.288
+(size-1.99)*(batch-3.0)     0.1092      0.035      3.092      0.005       0.036       0.182
 ==============================================================================
-Omnibus:                        5.001   Durbin-Watson:                   1.759
-Prob(Omnibus):                  0.082   Jarque-Bera (JB):                3.442
-Skew:                           0.478   Prob(JB):                        0.179
-Kurtosis:                       4.546   Cond. No.                         3.15
+Omnibus:                        0.438   Durbin-Watson:                   2.168
+Prob(Omnibus):                  0.803   Jarque-Bera (JB):                0.184
+Skew:                           0.205   Prob(JB):                        0.912
+Kurtosis:                       2.911   Cond. No.                         20.9
 ==============================================================================
 
 Notes:
